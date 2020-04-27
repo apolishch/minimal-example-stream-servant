@@ -1,0 +1,93 @@
+name:                mysample-sample
+version:             0.1.0.0
+license:             AllRightsReserved
+
+extra-source-files:
+- README.md
+
+ghc-options:
+  -Wall
+  -Werror
+  -Wincomplete-patterns
+  -Wincomplete-record-updates
+  -Wincomplete-uni-patterns
+  -Wmissing-signatures
+  -Wname-shadowing
+  -Wtabs
+  -Wunused-imports
+  -fno-warn-name-shadowing
+
+default-extensions:
+  - BangPatterns
+  - BlockArguments
+  - ConstraintKinds
+  - DataKinds
+  - DeriveAnyClass
+  - DeriveDataTypeable
+  - DeriveGeneric
+  - DerivingStrategies
+  - FlexibleContexts
+  - FlexibleInstances
+  - FunctionalDependencies
+  - GADTs
+  - GeneralizedNewtypeDeriving
+  - LambdaCase
+  - MultiParamTypeClasses
+  - NoImplicitPrelude
+  - OverloadedStrings
+  - PatternSynonyms
+  - PolyKinds
+  - QuasiQuotes
+  - RankNTypes
+  - RecordWildCards
+  - ScopedTypeVariables
+  - StandaloneDeriving
+  - TemplateHaskell
+  - TupleSections
+  - TypeApplications
+  - TypeFamilies
+  - TypeFamilyDependencies
+  - TypeOperators
+  - ViewPatterns
+
+dependencies:
+  - base
+  - protolude
+  - aeson
+  - text
+  - lens
+  - exceptions
+  - time
+  - uuid
+  - transformers
+  - mtl
+  - servant
+  - data-default
+  - unordered-containers
+  - system-fileio
+  - system-filepath
+
+library:
+  source-dirs: src/lib
+
+executables:
+  mysample-sample-exe:
+    main:                Main.hs
+    source-dirs:         src/app
+    ghc-options:
+      - -fPIC
+      - -Werror
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - servant-server
+      - wai
+      - wai-extra
+      - warp
+      - req
+      - qm-interpolated-string
+      - http-client
+      - regex-pcre
+      - bytestring
+      - http-types

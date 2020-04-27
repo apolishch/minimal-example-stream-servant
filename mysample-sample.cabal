@@ -1,0 +1,82 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 91fe33f7e401acfa628b09ecc465b8e372bbb742d2f707916dbb3034564b6489
+
+name:           mysample-sample
+version:        0.1.0.0
+license:        AllRightsReserved
+build-type:     Simple
+extra-source-files:
+    README.md
+
+library
+  other-modules:
+      Paths_mysample_sample
+  hs-source-dirs:
+      src/lib
+  default-extensions: BangPatterns BlockArguments ConstraintKinds DataKinds DeriveAnyClass DeriveDataTypeable DeriveGeneric DerivingStrategies FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving LambdaCase MultiParamTypeClasses NoImplicitPrelude OverloadedStrings PatternSynonyms PolyKinds QuasiQuotes RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators ViewPatterns
+  ghc-options: -Wall -Werror -Wincomplete-patterns -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-signatures -Wname-shadowing -Wtabs -Wunused-imports -fno-warn-name-shadowing
+  build-depends:
+      aeson
+    , base
+    , data-default
+    , exceptions
+    , lens
+    , mtl
+    , protolude
+    , servant
+    , system-fileio
+    , system-filepath
+    , text
+    , time
+    , transformers
+    , unordered-containers
+    , uuid
+  default-language: Haskell2010
+
+executable mysample-sample-exe
+  main-is: Main.hs
+  other-modules:
+      Domain.SampleRoute
+      Domain.Service.Sample.Errors
+      Domain.Service.Sample.SampleRoute
+      Http.Error
+      Http.Routes.SampleRoute
+      Http.Server
+      Services.MySample
+      Paths_mysample_sample
+  hs-source-dirs:
+      src/app
+  default-extensions: BangPatterns BlockArguments ConstraintKinds DataKinds DeriveAnyClass DeriveDataTypeable DeriveGeneric DerivingStrategies FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving LambdaCase MultiParamTypeClasses NoImplicitPrelude OverloadedStrings PatternSynonyms PolyKinds QuasiQuotes RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators ViewPatterns
+  ghc-options: -Wall -Werror -Wincomplete-patterns -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-signatures -Wname-shadowing -Wtabs -Wunused-imports -fno-warn-name-shadowing -fPIC -Werror -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base
+    , bytestring
+    , data-default
+    , exceptions
+    , http-client
+    , http-types
+    , lens
+    , mtl
+    , protolude
+    , qm-interpolated-string
+    , regex-pcre
+    , req
+    , servant
+    , servant-server
+    , system-fileio
+    , system-filepath
+    , text
+    , time
+    , transformers
+    , unordered-containers
+    , uuid
+    , wai
+    , wai-extra
+    , warp
+  default-language: Haskell2010

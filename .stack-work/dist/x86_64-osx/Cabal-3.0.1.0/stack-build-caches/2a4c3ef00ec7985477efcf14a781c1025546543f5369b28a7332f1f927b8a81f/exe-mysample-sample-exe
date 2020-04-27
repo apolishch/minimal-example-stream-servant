@@ -1,0 +1,40 @@
+/Users/skilurus/github/minimal-example/src/app/Domain/Service/Sample/SampleRoute.hs:
+  hash: b0244f42aeb2111bb45f2017d9bc1162d5cd05b4accea3b2b4c6c8a4df87cbb4
+  size: 491
+  modtime: 1588019502
+/Users/skilurus/github/minimal-example/src/app/Main.hs:
+  hash: 9e645451d7322d65af75b27dd15cdfa0c0061158888b756feb460fc1256ada99
+  size: 711
+  modtime: 1588008035
+/Users/skilurus/github/minimal-example/package.yaml:
+  hash: bf5ab30d35c95e470240c054766773a45deb9121c0241351a339719eb0424ae5
+  size: 1651
+  modtime: 1588009908
+/Users/skilurus/github/minimal-example/README.md:
+  hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  size: 0
+  modtime: 1588019018
+/Users/skilurus/github/minimal-example/src/app/Services/MySample.hs:
+  hash: 883515a45839dacbc98099c07bd3ae17fe2d326f4293afebc49574200e9fc631
+  size: 748
+  modtime: 1588023099
+/Users/skilurus/github/minimal-example/mysample-sample.cabal:
+  hash: a7f2b90c0d2e618e33cdb8c51c2e526e0d9e9e2122686f8caac52997603e841b
+  size: 2941
+  modtime: 1588019222
+/Users/skilurus/github/minimal-example/src/app/Domain/Service/Sample/Errors.hs:
+  hash: 7877148c44fd1aefa49d689dc810922504fba675d8b04fb2e5595f771ae8fbc3
+  size: 318
+  modtime: 1588019159
+/Users/skilurus/github/minimal-example/src/app/Http/Server.hs:
+  hash: b18d33b5f30324f766541e83139077a7e6f908df24cd36fde671075220f4c19e
+  size: 343
+  modtime: 1588008164
+/Users/skilurus/github/minimal-example/src/app/Domain/SampleRoute.hs:
+  hash: cc32c7e9fad33f33a4576d935f61e29632608c799962d6f2b1e67f82a84b9649
+  size: 582
+  modtime: 1588019192
+/Users/skilurus/github/minimal-example/src/app/Http/Routes/SampleRoute.hs:
+  hash: 137bd46465f24b353b24cf7035456aa22fa0891e786f30b5f5a03c55f4d6e27f
+  size: 1394
+  modtime: 1588008225
