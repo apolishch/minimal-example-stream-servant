@@ -12,4 +12,4 @@ sampleRoute
   => MonadError SampleError m
   => m ByteString
 
-sampleRoute = liftIO $ readFile $ fromText "/tmp/sample.pdf"
+sampleRoute = liftIO $ readFile $ fromText "./tmp/sample.pdf"

@@ -3,21 +3,21 @@ module Http.Routes.SampleRoute
 where
 
 import Protolude
-import Data.UUID                                                ( UUID )
 import Services.MySample                                        ( runSample )
 import Servant.API.Stream                                       ( SourceIO )
 import Servant.Server                                           ( Handler )
 import qualified Servant.Types.SourceT                          as S
 import Domain.Service.Sample.SampleRoute                        ( execute )
 import Http.Error                                               ( internalErr )
+import Domain.Service.Sample.Errors                             ( SampleError )
 
 
 -- -----------------------------------------------------------------------------------------------------------------------
 
-fetchDocument :: Handler (SourceIO ByteString)
-fetchDocument config = do
+sampleRoute :: Handler (SourceIO ByteString)
+sampleRoute = do
   putStrLn("In Route Handler"::Text)
-  val <- liftIO . runExceptT . runSample execute
+  val <- liftIO . runExceptT . runSample $  execute
   either handleError respond val
 
 -- ----------------------------------------------------------------------------------------------------------------------
@@ -27,7 +27,7 @@ respond doc = return $ S.source [doc]
 
 -- -----------------------------------------------------------------------------------------------------------------------
 
-handleError :: FlockError -> Handler (SourceIO ByteString)
+handleError :: SampleError -> Handler (SourceIO ByteString)
 handleError err = do
   putText $ show err
   throwError $ internalErr err

@@ -4,7 +4,7 @@ where
 
 import Protolude
 import Servant hiding                          ( Context )
-import MySample.Service.Sample.Domain.Http.Api ( Api )
+import Domain.Service.Sample.Http.Api                 ( Api )
 import Http.Routes.SampleRoute                 ( sampleRoute )
 
 server :: Server Api

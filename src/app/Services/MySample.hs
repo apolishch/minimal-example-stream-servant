@@ -1,5 +1,5 @@
 module Services.MySample
-  ( Flock(..)
+  ( MySample(..)
   )
 where
 
@@ -10,8 +10,8 @@ import Domain.Service.Sample.SampleRoute            ( MonadSampleRoute (..) )
 import qualified Domain.SampleRoute                 as SampleRoute
 
 
-newtype Flock a = FlockT
-  { runFlock :: ExceptT SampleError IO a
+newtype MySample a = MySampleT
+  { runSample :: ExceptT SampleError IO a
   }
   deriving newtype (MonadError SampleError)
   deriving newtype Applicative
@@ -22,5 +22,5 @@ newtype Flock a = FlockT
   deriving newtype MonadIO
 
 
-instance MonadSampleRoute Flock where
+instance MonadSampleRoute MySample where
     sampleRoute                     = SampleRoute.sampleRoute

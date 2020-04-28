@@ -1,11 +1,10 @@
 module Main where
 
 import Protolude
-import Control.Lens
 import Servant hiding                          ( Context )
 import Network.Wai.Middleware.RequestLogger    ( mkRequestLogger )
 import Data.Default                            ( def )
-import Flock.Service.Documents.Domain.Http.Api ( api )
+import Domain.Service.Sample.Http.Api          ( api )
 import Http.Server                             ( server )
 import Network.Wai.Handler.Warp                ( runSettings, defaultSettings, setPort )
 main :: IO ()

@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 91fe33f7e401acfa628b09ecc465b8e372bbb742d2f707916dbb3034564b6489
+-- hash: e2934234ffdb07e8e2754f49bf7d0573ed2a8a92dc1fb0dccf6c72ba37af5618
 
 name:           mysample-sample
 version:        0.1.0.0
@@ -43,6 +43,8 @@ executable mysample-sample-exe
   other-modules:
       Domain.SampleRoute
       Domain.Service.Sample.Errors
+      Domain.Service.Sample.Http.Api
+      Domain.Service.Sample.Http.Routes.SampleRoute
       Domain.Service.Sample.SampleRoute
       Http.Error
       Http.Routes.SampleRoute
