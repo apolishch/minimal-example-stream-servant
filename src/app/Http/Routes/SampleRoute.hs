@@ -10,12 +10,12 @@ import qualified Servant.Types.SourceT                          as S
 import Domain.Service.Sample.SampleRoute                        ( execute )
 import Http.Error                                               ( internalErr )
 import Domain.Service.Sample.Errors                             ( SampleError )
-
+import Data.UUID                              ( UUID )
 
 -- -----------------------------------------------------------------------------------------------------------------------
 
-sampleRoute :: Handler (SourceIO ByteString)
-sampleRoute = do
+sampleRoute :: UUID -> Handler (SourceIO ByteString)
+sampleRoute _ = do
   putStrLn("In Route Handler"::Text)
   val <- liftIO . runExceptT . runSample $  execute
   either handleError respond val
